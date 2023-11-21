@@ -38,6 +38,7 @@ def get_unique(column) :
     ls_unique=sorted(df[column].unique().tolist())
     if column=='Engine volume' :
         ls_unique.pop(0)
+        ls_unique.pop(20)
 
     return ls_unique
 
