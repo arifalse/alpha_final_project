@@ -57,6 +57,7 @@ with st.form(key='columns_in_form'):
         data_form=data_preparation(data_form,os)
 
         st.divider()
+
         st.subheader(f':green[The Price Prediction for this Car is :] {data_form}',divider='rainbow')
         #st.subheader("Price Prediction for this Car :")
         #st.subheader(data_form,)
