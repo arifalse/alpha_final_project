@@ -46,19 +46,15 @@ with st.form(key='columns_in_form'):
     submitButton = st.form_submit_button(label = 'Predict',type='primary')
     if submitButton:
         
-        #data_form=pd.DataFrame.from_dict(data, orient='index').transpose()
+        
         data=[Manufacturer,Model,Production_year,Levy,Category,Leather_interior, Fuel_type,\
              Engine_volume, Mileage,Cylinders,Gear_box_type,Drive_wheels,Wheel,Color,Airbags]
 
         data_form=pd.DataFrame([data],columns=column_form)
-        
-        #st.write('Submitted Data')
-        #st.dataframe(data_form,use_container_width=True)        
+              
         data_form=data_preparation(data_form,os)
 
         st.divider()
 
         st.subheader(f':green[The Price Prediction for this Car is :] {data_form}',divider='rainbow')
-        #st.subheader("Price Prediction for this Car :")
-        #st.subheader(data_form,)
         
